@@ -1,0 +1,15 @@
+{% extends "members/parent/base.html" %}
+{% load static %}
+{% block title %} list{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}">
+{% endblock %}
+{% block content %}
+<h1 class="test">list projects</h1>
+{% for post in posts %}
+    <a href="{{  post.get_absolute_url }}">
+        <h2>{{ post.auther }}:{{ post.title }}</h2>
+    </a>
+{% endfor %}
+    {% include 'members/partials/pagination.html ' with page=page_obj %}
+{% endblock %}

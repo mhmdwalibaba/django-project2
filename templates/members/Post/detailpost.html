@@ -1,0 +1,13 @@
+{% extends "members/parent/base.html" %}
+{% block title %}detail {% endblock %}
+{% block content %}
+<h2>
+        {{ post.title }}:{{ post.auther }}
+</h2>
+<P>
+    {{ post.body }}
+</P>
+<p>
+    {{ post.publish }}
+</p>
+{% endblock %}

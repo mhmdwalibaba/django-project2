@@ -1,0 +1,9 @@
+{% extends "members/parent/base.html" %}
+{% block content %}
+    <h1 style="color: blueviolet;margin-left: auto" >فرم اطلاعات شخصی</h1>
+    <form method="post">
+     {{ form.as_p }}
+     {% csrf_token %}
+     <input type="submit" value="ثبت">
+    </form>
+{% endblock %}
